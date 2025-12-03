@@ -1,89 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leman's Portfolio - Projects</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Leman — Projects</title>
+  <meta name="description" content="Projects — SOC dashboards, CTI, labs." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <nav class="navbar">
-    <div class="logo">Leman</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-    </ul>
-  </nav>
-
-  <section class="projects-section">
-    <h1>My Projects</h1>
-    
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>SIEM Log Analysis Dashboard</h3>
-        <p>Built custom dashboards in Splunk for real-time threat detection and security monitoring.</p>
-        <div class="tags">
-          <span>Splunk</span>
-          <span>Log Analysis</span>
-          <span>Dashboards</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Threat Intelligence Platform</h3>
-        <p>Implemented MISP for collecting, storing, and sharing cyber threat intelligence data.</p>
-        <div class="tags">
-          <span>MISP</span>
-          <span>CTI</span>
-          <span>Threat Hunting</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>QRadar Security Operations</h3>
-        <p>Managed IBM QRadar for security event monitoring, correlation rules, and incident response.</p>
-        <div class="tags">
-          <span>QRadar</span>
-          <span>SIEM</span>
-          <span>Incident Response</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Blue Team Defense Lab</h3>
-        <p>Created a home lab environment for practicing defensive security techniques and threat detection.</p>
-        <div class="tags">
-          <span>Blue Team</span>
-          <span>Security Monitoring</span>
-          <span>Lab Environment</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Cobalt Strike Testing</h3>
-        <p>Conducted adversary simulation exercises to test and improve defensive capabilities.</p>
-        <div class="tags">
-          <span>Cobalt Strike</span>
-          <span>Red Team</span>
-          <span>Testing</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>IT Helpdesk Support System</h3>
-        <p>Developed efficient ticketing and troubleshooting workflows at Azii Technology Center.</p>
-        <div class="tags">
-          <span>Helpdesk</span>
-          <span>IT Support</span>
-          <span>Customer Service</span>
-        </div>
+<body class="theme-dark">
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l7 4v5c0 5-3.8 9.7-7 11-3.2-1.3-7-6-7-11V6l7-4z"/></svg>
+        <span class="brand">Leman</span>
       </div>
     </div>
-  </section>
+    <nav class="nav-right">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="index.html#contact" class="btn-outline">Contact</a>
+    </nav>
+  </header>
 
-  <footer>
-    <p>&copy; 2024 Leman's Portfolio. All rights reserved.</p>
+  <main class="container">
+    <section class="projects-hero card">
+      <h1>Projects</h1>
+      <p class="muted">Selected cybersecurity projects, labs and dashboards.</p>
+    </section>
+
+    <section class="projects-grid-extended">
+      <article class="project card">
+        <h3>SIEM Log Analysis Dashboard</h3>
+        <p>Built custom Splunk dashboards for real-time detection. Implemented correlation rules and alerts to reduce false positives.</p>
+        <div class="progress"><div style="width:85%"></div></div>
+        <div class="meta"><span>Splunk</span><span>Dashboards</span></div>
+      </article>
+
+      <article class="project card">
+        <h3>Threat Intelligence Platform (MISP)</h3>
+        <p>Implemented MISP instance, created ingestion pipelines and enrichment with OSINT sources to increase CTI coverage.</p>
+        <div class="progress"><div style="width:75%"></div></div>
+        <div class="meta"><span>MISP</span><span>CTI</span></div>
+      </article>
+
+      <article class="project card">
+        <h3>Blue Team Defense Lab</h3>
+        <p>Home lab for practicing detection engineering: simulated attacks, log generation, detection tuning, and playbooks.</p>
+        <div class="progress"><div style="width:90%"></div></div>
+        <div class="meta"><span>Lab</span><span>Detection</span></div>
+      </article>
+
+      <article class="project card">
+        <h3>Cobalt Strike Testing</h3>
+        <p>Performed controlled adversary simulation to validate detections and improve response playbooks.</p>
+        <div class="progress"><div style="width:60%"></div></div>
+        <div class="meta"><span>Cobalt Strike</span><span>Red/Blue</span></div>
+      </article>
+
+      <article class="project card">
+        <h3>IT Helpdesk Support System</h3>
+        <p>Developed ticketing SOPs and troubleshooting workflows at Azii Technology Center to improve MTTR.</p>
+        <div class="progress"><div style="width:95%"></div></div>
+        <div class="meta"><span>Helpdesk</span><span>IT</span></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Leman</strong><p class="muted">SOC Analyst Portfolio</p></div>
+      <div class="muted">© <span id="year3"></span> Leman. All rights reserved.</div>
+    </div>
   </footer>
+
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
 </body>
 </html>
