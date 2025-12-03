@@ -1,68 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leman's Portfolio - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Leman — SOC Analyst Portfolio</title>
+  <meta name="description" content="Leman — SOC Analyst. Blue Team, SIEM, Threat Intel, Incident Response." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <nav class="navbar">
-    <div class="logo">Leman</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="projects.html">Projects</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero">
-    <div class="hero-content">
-      <div class="profile-image">
-        <img src="image.jpg" alt="Leman's Profile">
+<body class="theme-dark">
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <!-- simple shield-logo -->
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l7 4v5c0 5-3.8 9.7-7 11-3.2-1.3-7-6-7-11V6l7-4z"/></svg>
+        <span class="brand">Leman</span>
       </div>
-      <h1>Hello, I'm Leman</h1>
-      <p>Cybersecurity Specialist | Blue Team Analyst</p>
-      <a href="#about" class="btn">Learn More</a>
     </div>
-  </section>
+    <nav class="nav-right">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="#contact" class="btn-outline">Contact</a>
+    </nav>
+  </header>
 
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>I am a passionate cybersecurity professional specializing in Blue Team operations. Currently studying at Azerbaijan State Oil and Industry University (ADNSU), I focus on threat detection, incident response, and security monitoring.</p>
-    
-    <h3>Education</h3>
-    <p>🎓 Bachelor's Degree - Azerbaijan State Oil and Industry University (ADNSU)</p>
-    <p>🔐 Specialization: Cybersecurity - Blue Team Operations</p>
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="profile-card">
+          <div class="avatar">
+            <img src="assets/profile.jpg" alt="Leman profile photo" />
+          </div>
+          <div class="profile-info">
+            <h1>Hello, I'm <span class="accent">Leman</span></h1>
+            <p class="subtitle">SOC Analyst — Blue Team · Threat Detection · Incident Response</p>
+            <div class="badges">
+              <span class="badge">Splunk</span>
+              <span class="badge">MISP</span>
+              <span class="badge">QRadar</span>
+              <span class="badge">Threat Hunting</span>
+            </div>
+            <a href="#about" class="btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
 
-    <h3>Technical Skills & Tools</h3>
-    <p>🛡️ <strong>SIEM Platforms:</strong> Splunk, QRadar</p>
-    <p>🔍 <strong>Threat Intelligence:</strong> Open Source CTI, MISP (Malware Information Sharing Platform)</p>
-    <p>⚔️ <strong>Security Testing:</strong> Cobalt Strike</p>
-    <p>💻 <strong>Security Operations:</strong> Log Analysis, Incident Response, Threat Hunting</p>
+      <div class="hero-right">
+        <div class="dashboard">
+          <div class="stat">
+            <div class="stat-title">Open Incidents</div>
+            <div class="stat-value">3</div>
+            <div class="stat-meta">Last 24h: 1 new</div>
+          </div>
+          <div class="stat">
+            <div class="stat-title">SIEM Events / min</div>
+            <div class="stat-value">4.2k</div>
+            <div class="stat-meta">Avg throughput</div>
+          </div>
+          <div class="stat">
+            <div class="stat-title">Threat Feeds</div>
+            <div class="stat-value">5</div>
+            <div class="stat-meta">MISP · OSINT</div>
+          </div>
+        </div>
 
-    <h3>Professional Experience</h3>
-    <p>💼 <strong>Helpdesk Specialist</strong> - Azii Technology Center</p>
-    <p style="margin-left: 25px; color: #7f8c8d;">• Provided technical support and troubleshooting</p>
-    <p style="margin-left: 25px; color: #7f8c8d;">• Managed IT infrastructure and user assistance</p>
-    <p style="margin-left: 25px; color: #7f8c8d;">• Resolved hardware and software issues</p>
+        <div class="quick-actions">
+          <button class="action">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l7 4v6c0 4-3 8-7 10-4-2-7-6-7-10V6l7-4z"/></svg>
+            Create Report
+          </button>
+          <button class="action">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3zM3 11h12v2H3zM3 16h18v2H3z"/></svg>
+            Run Hunt
+          </button>
+        </div>
 
-    <h3>Volunteer Experience</h3>
-    <p>🌟 <strong>ASAN3</strong> - IT Volunteer</p>
-    <p>🌟 <strong>ITU WTDC25</strong> - Technology Event Volunteer</p>
-    <p>🌟 <strong>COP (Conference of the Parties)</strong> - Event Support Volunteer</p>
-    <p>🌟 <strong>Uzbekistan Universities</strong> - Educational Programs Volunteer</p>
+        <div class="recent">
+          <h4>Recent Alerts</h4>
+          <ul>
+            <li><strong>Suspicious PowerShell</strong> — host-23 · <span>Medium</span></li>
+            <li><strong>Failed Logins (Brute)</strong> — vpn-gw · <span>Low</span></li>
+            <li><strong>Malicious IP Contact</strong> — websrv-2 · <span class="high">High</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <h3>Areas of Expertise</h3>
-    <p>🎯 Blue Team Defense Strategies</p>
-    <p>🎯 Security Information and Event Management (SIEM)</p>
-    <p>🎯 Cyber Threat Intelligence Analysis</p>
-    <p>🎯 Incident Detection and Response</p>
-    <p>🎯 Security Monitoring and Log Management</p>
-  </section>
+    <section id="about" class="about container">
+      <div class="about-grid">
+        <div class="about-left card">
+          <h2>About Me</h2>
+          <p>I am a SOC Analyst focused on detection engineering, threat hunting, and incident response. Currently studying Cybersecurity at Azerbaijan State Oil and Industry University (ADNSU). Passionate about building efficient detection, tuning SIEM, and collaborating with CTI communities.</p>
 
-  <footer>
-    <p>&copy; 2024 Leman's Portfolio. All rights reserved.</p>
+          <h3>Education</h3>
+          <p>🎓 Bachelor's — Azerbaijan State Oil and Industry University (ADNSU)</p>
+
+          <h3>Experience</h3>
+          <p>💼 Helpdesk Specialist — Azii Technology Center — IT support, troubleshooting, ticket workflows.</p>
+
+          <div class="cta-row">
+            <a href="projects.html" class="btn-secondary">View Projects</a>
+            <a href="blog.html" class="btn-outline">Read Blog</a>
+          </div>
+        </div>
+
+        <aside class="about-right card skills">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>SIEM: Splunk · IBM QRadar</li>
+            <li>Threat Intelligence: MISP · OSINT</li>
+            <li>Security Ops: Incident Response · Log Analysis</li>
+            <li>Tools: Wireshark · Elastic · Cobalt Strike (red team simulation experience)</li>
+          </ul>
+
+          <h3 class="mt">Certs & Volunteering</h3>
+          <p>ASAN3 Volunteer · IT Event Support (ITU WTDC25) · COP event support</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="projects-preview container">
+      <div class="section-head">
+        <h2>Selected Projects</h2>
+        <a href="projects.html" class="link">See all →</a>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <h4>SIEM Log Analysis Dashboard</h4>
+          <p>Real-time dashboards and correlation rules for enterprise telemetry (Splunk).</p>
+          <div class="tags"><span>Splunk</span><span>Dashboards</span></div>
+        </article>
+
+        <article class="project-card">
+          <h4>Threat Intelligence Platform (MISP)</h4>
+          <p>Integration and enrichment pipelines for CTI ingestion.</p>
+          <div class="tags"><span>MISP</span><span>CTI</span></div>
+        </article>
+
+        <article class="project-card">
+          <h4>Blue Team Defense Lab</h4>
+          <p>Home lab for detection engineering and incident response drills.</p>
+          <div class="tags"><span>Lab</span><span>Hunting</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container card">
+      <div class="contact-left">
+        <h3>Contact</h3>
+        <p>If you'd like to collaborate, review my work, or discuss SOC/CTI — reach out.</p>
+        <p>Email: <a href="mailto:leman@example.com">leman@example.com</a></p>
+      </div>
+      <div class="contact-right">
+        <h3>Quick Info</h3>
+        <p>Location: Azerbaijan · Languages: Azerbaijani, English</p>
+        <p>Open to internships & junior SOC roles.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Leman</strong>
+        <p class="muted">SOC Analyst Portfolio • ADNSU</p>
+      </div>
+      <div class="muted">© <span id="year"></span> Leman. All rights reserved.</div>
+    </div>
   </footer>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
